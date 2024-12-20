@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frases al azar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .frase {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="frase" id="frase"></div>
+
+  <script>
+    // Lista de frases
+    const frases = [
+      "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+      "La única manera de hacer un gran trabajo es amar lo que haces.",
+      "No cuentes los días, haz que los días cuenten.",
+      "El fracaso es éxito si aprendemos de él.",
+      "La vida es 10% lo que te pasa y 90% cómo reaccionas a ello.",
+      "Nunca es demasiado tarde para ser lo que podrías haber sido.",
+      "Persigue tus sueños con pasión y determinación."
+    ];
+
+    // Seleccionar una frase al azar
+    function obtenerFraseAleatoria() {
+      const indiceAleatorio = Math.floor(Math.random() * frases.length);
+      return frases[indiceAleatorio];
+    }
+
+    // Mostrar la frase en la pantalla
+    const divFrase = document.getElementById('frase');
+    divFrase.textContent = obtenerFraseAleatoria();
+  </script>
+</body>
+</html>
